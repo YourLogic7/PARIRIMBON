@@ -1,0 +1,27 @@
+{
+  "name": "paririmbon-monorepo",
+  "version": "1.0.0",
+  "description": "PARIRIMBON - Interactive Knowledge Management System with Book UI/UX & AI Assist",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "start": "node server/src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
